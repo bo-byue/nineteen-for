@@ -218,5 +218,40 @@ Accuracy 表示模型在 query set 上分类正确的比例。通常来说，acc
 
 
 
----
+三、环境配置
+1. 创建并激活 Python 虚拟环境（推荐 Python ≥ 3.8）：
+   ```bash
+   python -m venv venv
+   source venv/bin/activate    Linux / macOS
+   venv\Scripts\activate       Windows
+安装依赖：
+Bash
+pip install -r requirements.txt
+若使用 CUDA，请根据 PyTorch 官方指南 安装对应版本。
+
+
+
+
+四、运行方法
+按顺序执行以下脚本：
+
+Bash
+ 1. 检查环境
+python 01_check_environment.py
+ 2. 查看 Omniglot 样例图片
+python 02_show_omniglot_sample.py
+ 3. 可视化一个 episode 的 support/query 划分
+python 03_visualize_5way5shot_episode.py
+ 4. 训练原型网络并进行 5‑way 5‑shot 测试
+python 04_train_protonet_5way5shot.py
+所有输出图片和训练曲线将保存在 outputs/ 目录下。
+
+实验结果
+在默认超参数下（300 个训练 episodes，5‑way 5‑shot），模型在 Omniglot 测试集上的平均准确率约为 98% 左右。
+
+最终准确率文本将保存至 outputs/08_final_accuracy_result.txt。
+
+注意事项
+首次运行脚本时会自动下载 Omniglot 数据集（约 18 MB）至 ./data 目录，请保持网络畅通。
+训练过程默认使用 CPU（若无 NVIDIA GPU），可通过修改脚本中的 device 变量切换设备。
 

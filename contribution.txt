@@ -1,0 +1,33 @@
+项目名称：Omniglot 5‑way 5‑shot 原型网络实验
+小组人数：5 人
+分工说明：
+
+陈思同：数据预处理与可视化
+
+编写 02_show_omniglot_sample.py 脚本
+编写 03_visualize_5way5shot_episode.py 脚本
+负责数据探索与样例图片生成
+
+刘智勇：模型设计与训练脚本
+
+编写 04_train_protonet_5way5shot.py 脚本
+实现原型网络特征提取器与训练循环
+调参并获取最终测试准确率
+
+刘作强：环境配置与代码整合
+
+编写 01_check_environment.py 脚本
+编写 requirements.txt 与 README.md
+确保全组环境一致，代码可复现
+
+易昊：实验测试与结果分析
+
+运行训练脚本，记录不同超参数下的准确率
+绘制 loss / accuracy 曲线并分析模型性能
+撰写实验结果部分
+
+吴文铭：报告撰写与文档整理
+
+撰写 report.pdf 主要内容
+整合所有成员贡献形成最终实验报告
+文档排版与格式审查
